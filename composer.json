@@ -1,0 +1,25 @@
+{
+	"name": "metaclassing/PHP7-SSHWrapper",
+	"type": "library",
+	"description": "Friendly wrapper for PHPSECLIB SSHv2 client",
+	"homepage": "http://github.com/metaclassing/PHP7-SSHWrapper",
+	"license": "LGPL3.0",
+	"authors": [
+		{
+			"name": "metaclassing",
+			"email": "composer@secureobscure.com",
+			"role": "Developer"
+		}
+	],
+	
+	"minimum-stability": "dev",
+    "require": {
+		"php": ">=5.3.3",
+        "phpseclib/phpseclib": "2.0.*"
+	},
+    "autoload": {
+        "psr-4": {
+            "Metaclassing\\": "src"
+        }
+    }
+}
