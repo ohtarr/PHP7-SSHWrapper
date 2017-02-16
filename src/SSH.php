@@ -117,6 +117,9 @@ class SSH {
         if ($message && $level <= $this->loglevel) {
             $this->messages[] = $message;
         }
+		if ($this->loglevel >= 9) {
+			echo 'Metaclassing\SSH: '.$message.PHP_EOL;
+		}
         return $this->messages;
     }
 
@@ -139,14 +142,18 @@ class SSH {
 			throw new \Exception('Unable to probe port '.$this->port.' on host '.$this->host);
 		}
 		// Create our PHPSECLIB SSH2 object
+		$this->log('Creating phpseclib\Net\SSH2 object for host '.$this->host, 9);
 		$this->ssh = new \phpseclib\Net\SSH2($this->host);
+		$this->log('Setting timeout to '.$this->timeout, 9);
 		$this->ssh->setTimeout($this->timeout);
 		// Attempt to login
+		$this->log('Sending login credentials: '.$this->username.' '.$this->password, 9);
 		$this->connected = $this->ssh->login($this->username, $this->password);
         if (!$this->connected) {
             throw new \Exception('Failed to connect to host');
         }
 		$this->prompt = "";
+		$this->log('Connected, calling findprompt', 9);
 		$this->findprompt();
 
 		return $this;
