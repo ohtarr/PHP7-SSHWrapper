@@ -241,9 +241,6 @@ class SSH {
 		if (!$this->connected) {
 			throw new \Exception('Not connected');
 		}
-		if (!$this->prompt) {
-			throw new \Exception('Prompt is unknown');
-		}
 		$this->ssh->write($command);
 	}
 
@@ -252,9 +249,6 @@ class SSH {
 	{
         if (!$this->connected) {
             throw new \Exception('Not connected');
-        }
-        if (!$this->prompt) {
-            throw new \Exception('Prompt is unknown');
         }
 		return $this->ssh->read($expect, \phpseclib\Net\SSH2::READ_REGEX);
 	}
