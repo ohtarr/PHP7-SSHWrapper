@@ -1,5 +1,5 @@
 {
-	"name": "metaclassing/PHP7-SSHWrapper",
+	"name": "metaclassing/php7-sshwrapper",
 	"type": "library",
 	"description": "Friendly wrapper for PHPSECLIB SSHv2 client",
 	"homepage": "http://github.com/metaclassing/PHP7-SSHWrapper",
