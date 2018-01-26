@@ -3,7 +3,7 @@
 	"type": "library",
 	"description": "Friendly wrapper for PHPSECLIB SSHv2 client",
 	"homepage": "http://github.com/metaclassing/PHP7-SSHWrapper",
-	"license": "LGPL3.0",
+	"license": "LGPL-3.0-or-later",
 	"authors": [
 		{
 			"name": "metaclassing",
