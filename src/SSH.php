@@ -17,7 +17,6 @@ namespace Metaclassing;
 // TODO:
 /*
 	SSH key based authentication vs username/password
-	support non-standard TCP ports
 	EXTERNALIZE the SSH prompt patterns into a JSON file
 */
 
@@ -143,7 +142,7 @@ class SSH {
 		}
 		// Create our PHPSECLIB SSH2 object
 		$this->log('Creating phpseclib\Net\SSH2 object for host '.$this->host, 9);
-		$this->ssh = new \phpseclib\Net\SSH2($this->host);
+		$this->ssh = new \phpseclib\Net\SSH2($this->host, $this->port);
 		$this->log('Setting timeout to '.$this->timeout, 9);
 		$this->ssh->setTimeout($this->timeout);
 		// Attempt to login
