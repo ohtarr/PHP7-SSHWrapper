@@ -1,8 +1,8 @@
 {
 	"name": "ohtarr/php7-sshwrapper",
 	"type": "library",
-	"description": "Friendly wrapper for PHPSECLIB SSHv2 client",
-	"homepage": "http://github.com/metaclassing/PHP7-SSHWrapper",
+	"description": "Friendly wrapper for PHPSECLIBv3 SSHv2 client",
+	"homepage": "http://github.com/ohtarr/PHP7-SSHWrapper",
 	"license": "LGPL-3.0-or-later",
 	"authors": [
 		{
@@ -14,7 +14,7 @@
 	"minimum-stability": "dev",
     "require": {
 		"php": ">=5.5.9",
-        "phpseclib/phpseclib": ">=2.0.*"
+        "phpseclib/phpseclib": ">=2.0"
 	},
     "autoload": {
         "psr-4": {
