@@ -1,5 +1,6 @@
 # PHP7-SSHWrapper
 Friendly wrapper for the amazing PHPSECLIB SSHv2 implementation
+Forked from metaclassing/php7-sshwrapper to update phpseclib version.
 # SIMPLE example usage:
 ```php
 # more test.php
